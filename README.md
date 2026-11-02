@@ -38,38 +38,69 @@ With **5+ years of hands-on enterprise experience**, I specialize in building re
 
 ```mermaid
 graph TD
-    Portfolio["<b>GitHub Portfolio</b>"]
+    %% Root Node
+    Portfolio["<b>🏛️ GITHUB DEVOPS & CLOUD ARCHITECTURE PORTFOLIO</b><br/><i>5+ Years Enterprise Experience &bull; Production Reference Architecture</i>"]
 
-    Portfolio --> ALZ["<b>Azure Landing<br/>Zone</b>"]
-    Portfolio --> TF["<b>Terraform<br/>CI/CD</b>"]
-    Portfolio --> ADO["<b>Azure<br/>DevSecOps<br/>Platform</b>"]
-    Portfolio --> K8S["<b>Container<br/>Supply Chain</b>"]
-    Portfolio --> AI["<b>Applied AI &<br/>LLMOps Platform</b>"]
+    %% Level 1: Five Core Enterprise Pillars
+    Portfolio --> ALZ["<b>1. Azure Landing Zone (CAF)</b>"]
+    Portfolio --> TF["<b>2. Terraform CI/CD Platform</b>"]
+    Portfolio --> ADO["<b>3. Azure DevSecOps Platform</b>"]
+    Portfolio --> K8S["<b>4. Container Supply Chain & K8s</b>"]
+    Portfolio --> AI["<b>5. Applied AI & LLMOps Platform</b>"]
 
-    %% DevSecOps Sub-branch
-    ADO --> IaCScan["<b>Terraform<br/>Validation and<br/>IaC Scan</b>"]
+    %% Level 2: Sub-domains for Pillar 1 - Azure Landing Zone
+    ALZ --> ALZ_1["<b>Management Hierarchy & RBAC</b><br/>• Entra ID Tenant Root & Management Groups<br/>• PIM & Just-In-Time (JIT) Role Elevation<br/>• Multi-Stage Approval Role Workflows"]
+    ALZ --> ALZ_2["<b>Hub-and-Spoke Zero-Trust Network</b><br/>• ExpressRoute & S2S VPN Gateway Interconnect<br/>• Azure Firewall Premium (TLS & IDPS)<br/>• Private Endpoints & Hub Private DNS Zones"]
+    ALZ --> ALZ_3["<b>Policy Guardrails & Governance</b><br/>• CIS Azure Benchmark & MCSB Initiatives<br/>• Automated Audit/Deny Policy Enforcement<br/>• Mandatory Resource Tagging & FinOps Budgets"]
 
-    %% Container Supply Chain Sub-branches
-    K8S --> VulnScan["<b>Image<br/>Vulnerability<br/>Scan</b>"]
-    K8S --> SBOM["<b>SBOM<br/>Artifacts</b>"]
+    %% Level 2: Sub-domains for Pillar 2 - Terraform CI/CD
+    TF --> TF_1["<b>Modular IaC Architecture</b><br/>• Parameterized Reusable Terraform Modules<br/>• Semantic Versioning (v1.x.x Release Tags)<br/>• Dev / UAT / Prod Variable Isolation"]
+    TF --> TF_2["<b>Remote State Concurrency & Security</b><br/>• Azure Blob Storage with Blob Lease Locking<br/>• Customer-Managed Keys (CMK) Encryption<br/>• System-Assigned Managed Identity Auth"]
+    TF --> TF_3["<b>Shift-Left FinOps & Drift Control</b><br/>• Infracost PR Cost Impact Guardrails<br/>• Automated Scheduled Drift Detection Pipelines<br/>• Static Linting (tflint & terraform fmt)"]
 
-    %% AI / LLMOps Sub-branches
-    AI --> MCP["<b>Model Context<br/>Protocol (MCP)</b>"]
-    AI --> RAG["<b>Semantic RAG &<br/>AI Agents</b>"]
+    %% Level 2: Sub-domains for Pillar 3 - Azure DevSecOps Platform (Matching user specification + complete context)
+    ADO --> ADO_1["<b>Terraform Validation & IaC Scan</b><br/>• Static Analysis: terraform fmt & tflint<br/>• Security Scans: Checkov & tfsec<br/>• Secret Detection: GitLeaks & SonarQube"]
+    ADO --> ADO_2["<b>Trunk-Based Git Governance</b><br/>• Protected main Branch (No Direct Push)<br/>• CODEOWNERS Enforced Path Approvals<br/>• Mandatory 2+ Senior Peer Sign-offs"]
+    ADO --> ADO_3["<b>Multi-Stage ADO YAML Pipelines</b><br/>• Immutable Build & Plan Artifact Gates<br/>• Environment Approvals (Dev ➔ UAT ➔ Prod)<br/>• Automated Health Probes & Rollback Workflows"]
 
-    %% Crisp Lavender & Violet Theme (Matching Architectural Specification)
-    style Portfolio fill:#f3f0ff,stroke:#7c3aed,stroke-width:2.5px,color:#1e1b4b
-    style ALZ fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.8px,color:#1e1b4b
-    style TF fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.8px,color:#1e1b4b
-    style ADO fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.8px,color:#1e1b4b
-    style K8S fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.8px,color:#1e1b4b
-    style AI fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.8px,color:#1e1b4b
+    %% Level 2: Sub-domains for Pillar 4 - Container Supply Chain (Matching user specification + complete context)
+    K8S --> K8S_1["<b>Image Vulnerability Scan</b><br/>• Multi-Stage Dockerfile (Distroless / Minimal)<br/>• Non-Root Container Execution (USER 10001)<br/>• Trivy CVE & OS Dependency Scanning"]
+    K8S --> K8S_2["<b>SBOM Artifacts & Supply Chain Security</b><br/>• Software Bill of Materials (SBOM) via Syft<br/>• Cryptographic Keyless Signing via Cosign<br/>• Azure Container Registry (ACR) Content Trust"]
+    K8S --> K8S_3["<b>Production Kubernetes (AKS) Platform</b><br/>• System Node Pool vs User Workload Pool Isolation<br/>• HPA & KEDA Event-Driven Horizontal Autoscaling<br/>• ArgoCD GitOps Engine & Helm v3 Declarations"]
 
-    style IaCScan fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style VulnScan fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style SBOM fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style MCP fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style RAG fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
+    %% Level 2: Sub-domains for Pillar 5 - Applied AI & LLMOps Platform
+    AI --> AI_1["<b>Model Context Protocol (MCP)</b><br/>• Standardized MCP Server-Client Protocol<br/>• Cloud CLI & IaC Tool Invocations<br/>• Database & Monitoring API Integrations"]
+    AI --> AI_2["<b>Enterprise Semantic RAG Pipeline</b><br/>• Automated Document Chunking & ETL<br/>• Vector DBs (Azure AI Search / Chroma / Pinecone)<br/>• Hybrid BM25 & Semantic Search with RBAC"]
+    AI --> AI_3["<b>Autonomous Agents & LLMOps Guardrails</b><br/>• LangChain / Semantic Kernel Reasoning Loops<br/>• Private Azure OpenAI Endpoints via VNet<br/>• Token Budgeting, Rate Limiting & Prompt Defense"]
+
+    %% Clean, high-contrast styling: 100% readable in light and dark modes
+    style Portfolio fill:#ede9fe,stroke:#6366f1,stroke-width:2.5px,color:#0f172a
+
+    style ALZ fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style TF fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style ADO fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style K8S fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style AI fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+
+    style ALZ_1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ALZ_2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ALZ_3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+
+    style TF_1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style TF_2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style TF_3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+
+    style ADO_1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style ADO_2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ADO_3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+
+    style K8S_1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style K8S_2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style K8S_3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+
+    style AI_1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style AI_2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style AI_3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 ---
@@ -129,28 +160,38 @@ Automated, peer-reviewed Infrastructure as Code lifecycle with shift-left securi
 flowchart LR
     subgraph CodeStage["1. Code & Verification"]
         Dev["👨‍💻 Dev Commit"] --> Git["📦 Git Repo (Feature Branch)"]
-        Git --> Lint["🔍 Lint & Format\n(terraform fmt / tflint)"]
+        Git --> Lint["🔍 Lint & Format<br/>(terraform fmt / tflint)"]
     end
 
     subgraph SecurityStage["2. Security & Guardrails"]
-        Lint --> Sec["🛡️ Security Scanning\n(Checkov / tfsec / GitLeaks)"]
-        Sec --> Cost["💰 Cost Estimation\n(Infracost Budget Guardrail)"]
+        Lint --> Sec["🛡️ Security Scanning<br/>(Checkov / tfsec / GitLeaks)"]
+        Sec --> Cost["💰 Cost Estimation<br/>(Infracost Budget Guardrail)"]
     end
 
     subgraph PlanStage["3. Plan & Peer Approval"]
-        Cost --> Plan["📋 Terraform Plan\n(Drift Detection & Artifact)"]
-        Plan --> Gate{"🚦 Approval Gate\n(Min 2 Senior Reviews\n+ CODEOWNERS)"}
+        Cost --> Plan["📋 Terraform Plan<br/>(Drift Detection & Artifact)"]
+        Plan --> Gate{"🚦 Approval Gate<br/>(Min 2 Senior Reviews<br/>+ CODEOWNERS)"}
     end
 
     subgraph ApplyStage["4. Secure Deployment"]
-        Gate -->|"Approved"| Apply["🚀 Terraform Apply\n(Remote State Locked)"]
-        Apply --> State[("🔒 Azure Blob Storage\nLease Lock & CMK")]
+        Gate -->|"Approved"| Apply["🚀 Terraform Apply<br/>(Remote State Locked)"]
+        Apply --> State[("🔒 Azure Blob Storage<br/>Lease Lock & CMK")]
     end
 
-    style CodeStage fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style SecurityStage fill:#1e1b4b,stroke:#818cf8,stroke-width:1px,color:#fff
-    style PlanStage fill:#14233c,stroke:#f59e0b,stroke-width:1px,color:#fff
-    style ApplyStage fill:#062e24,stroke:#10b981,stroke-width:1px,color:#fff
+    style CodeStage fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style SecurityStage fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style PlanStage fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style ApplyStage fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style Dev fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Git fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Lint fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Sec fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Cost fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Plan fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Gate fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style Apply fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style State fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 - **Remote State Management:** Enterprise state stored in private Azure Storage Accounts with Blob Lease locking, encrypted at rest, and accessed strictly via Least-Privilege Managed Identities.
@@ -193,13 +234,24 @@ flowchart TD
         StageProd -.->|"Health Check Failure"| Rollback["⏪ Automated Rollback Plan"]
     end
 
-    style ADOPlatform fill:#f3f0ff,stroke:#7c3aed,stroke-width:2.5px,color:#1e1b4b
-    style GitStrategy fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style IaCPipeline fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style ADOPipeline fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style IaCScan fill:#faf5ff,stroke:#a855f7,stroke-width:1.8px,color:#1e1b4b
-    style StageArtifact fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#1e1b4b
-    style StageProd fill:#ffffff,stroke:#7c3aed,stroke-width:1.8px,color:#1e1b4b
+    style ADOPlatform fill:#ede9fe,stroke:#6366f1,stroke-width:2.5px,color:#0f172a
+    style GitStrategy fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style IaCPipeline fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style ADOPipeline fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style FB fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style PR fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style PRChecks fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Approvals fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style MainBranch fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style IaCScan fill:#ffffff,stroke:#8b5cf6,stroke-width:1.8px,color:#0f172a
+    style CostEst fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style StageArtifact fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style StageDev fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style StageUAT fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ProdGate fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style StageProd fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style Rollback fill:#ffffff,stroke:#ef4444,stroke-width:1.5px,color:#0f172a
 ```
 
 - **Branching Model:** Trunk-based development with short-lived feature branches (`feature/*`, `fix/*`).
@@ -227,14 +279,14 @@ flowchart TD
     Tenant --> Root
 
     subgraph PlatformGroup["🏛️ Platform Management Group"]
-        Identity["🔑 Identity MG\n(AD DS / Private DNS)"]
-        Management["📊 Management MG\n(Log Analytics / AMA)"]
-        Connectivity["🌐 Connectivity MG\n(Hub VNet / Azure FW)"]
+        Identity["🔑 Identity MG<br/>(AD DS / Private DNS)"]
+        Management["📊 Management MG<br/>(Log Analytics / AMA)"]
+        Connectivity["🌐 Connectivity MG<br/>(Hub VNet / Azure FW)"]
     end
 
     subgraph WorkloadGroup["🚀 Landing Zones Management Group"]
-        Corp["🔒 Corp Workloads\n(Internal Subnets / PaaS)"]
-        Online["🌍 Online Workloads\n(Public Facing / WAF)"]
+        Corp["🔒 Corp Workloads<br/>(Internal Subnets / PaaS)"]
+        Online["🌍 Online Workloads<br/>(Public Facing / WAF)"]
         DevSubs["🧪 Dev Subscriptions"]
         UatSubs["🏢 UAT Subscriptions"]
         ProdSubs["💎 Prod Subscriptions"]
@@ -252,13 +304,25 @@ flowchart TD
     Root --> WorkloadGroup
     Root --> GovSandbox
 
-    PolicyInitiatives{{"🛡️ Azure Policy Initiatives\nCIS Azure Benchmark & MCSB"}} -.->|"Audit / Deny Guardrails"| Root
+    PolicyInitiatives{{"🛡️ Azure Policy Initiatives<br/>CIS Azure Benchmark & MCSB"}} -.->|"Audit / Deny Guardrails"| Root
 
-    style Tenant fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style Root fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style PlatformGroup fill:#132038,stroke:#60a5fa,stroke-width:1px,color:#fff
-    style WorkloadGroup fill:#0d261e,stroke:#34d399,stroke-width:1px,color:#fff
-    style GovSandbox fill:#2e1515,stroke:#f87171,stroke-width:1px,color:#fff
+    style Tenant fill:#ede9fe,stroke:#6366f1,stroke-width:2px,color:#0f172a
+    style Root fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style PlatformGroup fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style WorkloadGroup fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style GovSandbox fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style Identity fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Management fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Connectivity fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Corp fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Online fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style DevSubs fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style UatSubs fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ProdSubs fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Sandbox fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Decom fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style PolicyInitiatives fill:#ffffff,stroke:#7c3aed,stroke-width:1.8px,color:#0f172a
 ```
 
 - **Subscription Boundaries:** Enforce strict segregation across lifecycle environments (`Dev`, `UAT`, `Prod`) and core functions (`Platform` vs `Workloads`) to prevent blast radius expansion and noisy-neighbor issues.
@@ -289,19 +353,19 @@ flowchart TD
 
     subgraph HubVNet["🌐 HUB VNet (Central Connectivity & Security)"]
         ER --> GatewaySubnet["GatewaySubnet"]
-        Firewall["🔥 Azure Firewall Premium\n(TLS Inspection & IDPS)"]
-        PrivateDNS["📋 Private DNS Zones\n(privatelink.azure.com)"]
+        Firewall["🔥 Azure Firewall Premium<br/>(TLS Inspection & IDPS)"]
+        PrivateDNS["📋 Private DNS Zones<br/>(privatelink.azure.com)"]
         GatewaySubnet ==>|"UDR: 0.0.0.0/0"| Firewall
     end
 
     subgraph SpokeApp["📦 Spoke 1: App Workloads VNet"]
-        AppTier["App Subnets\n(Private IPs)"]
-        DBTier["DB Subnets\n(Zero Public Ingress)"]
-        PvtEndpoint["🔒 Private Endpoints\n(Key Vault, SQL, Storage)"]
+        AppTier["App Subnets (Private IPs)"]
+        DBTier["DB Subnets (Zero Public Ingress)"]
+        PvtEndpoint["🔒 Private Endpoints<br/>(Key Vault, SQL, Storage)"]
     end
 
     subgraph SpokeShared["🛠️ Spoke 2: Shared Services VNet"]
-        Runners["Private CI/CD Agents\n(Azure DevOps / GitHub)"]
+        Runners["Private CI/CD Agents<br/>(Azure DevOps / GitHub)"]
         Bastion["Azure Bastion Host"]
         SecTools["Vulnerability Scanners"]
     end
@@ -310,10 +374,23 @@ flowchart TD
     Firewall <==>|"VNet Peering + UDR"| SpokeShared
     PvtEndpoint -.->|"DNS Resolution"| PrivateDNS
 
-    style OnPrem fill:#1e293b,stroke:#94a3b8,stroke-width:1px,color:#fff
-    style HubVNet fill:#0b1d3a,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style SpokeApp fill:#0b291e,stroke:#34d399,stroke-width:1px,color:#fff
-    style SpokeShared fill:#23193a,stroke:#a78bfa,stroke-width:1px,color:#fff
+    style OnPrem fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style HybridConnectivity fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style HubVNet fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#0f172a
+    style SpokeApp fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style SpokeShared fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style DC fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ER fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style GatewaySubnet fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Firewall fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style PrivateDNS fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style AppTier fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style DBTier fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style PvtEndpoint fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Runners fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Bastion fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style SecTools fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 - **IP Address Management (IPAM):** Zero-overlap CIDR allocation bridging on-premises subnets and cloud address spaces.
@@ -351,10 +428,23 @@ flowchart TD
 
     Layer1 ==> Layer2 ==> Layer3 ==> Layer4
 
-    style Layer1 fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style Layer2 fill:#14233c,stroke:#818cf8,stroke-width:1px,color:#fff
-    style Layer3 fill:#192e27,stroke:#34d399,stroke-width:1px,color:#fff
-    style Layer4 fill:#2e1f14,stroke:#fb923c,stroke-width:1px,color:#fff
+    style Layer1 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Layer2 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Layer3 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Layer4 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style ID1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ID2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ID3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style NET1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style NET2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style NET3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style GOV1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style GOV2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style GOV3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style CMP1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style CMP2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style CMP3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 | Security Layer | Key Controls & Technologies |
@@ -396,11 +486,22 @@ flowchart LR
         C2 --> H1["24x7 War Room Monitoring"] --> H2["Benchmarking & Handover"]
     end
 
-    style Phase1 fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style Phase2 fill:#14233c,stroke:#818cf8,stroke-width:1px,color:#fff
-    style Phase3 fill:#132838,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style Phase4 fill:#0d261e,stroke:#34d399,stroke-width:1px,color:#fff
-    style Phase5 fill:#241d08,stroke:#f59e0b,stroke-width:1px,color:#fff
+    style Phase1 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Phase2 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Phase3 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Phase4 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style Phase5 fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style D1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style D2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style A1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style A2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style R1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style R2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style C1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style C2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style H1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style H2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 ### Complete Migration Lifecycle Checklists:
@@ -467,18 +568,18 @@ Bridging engineering execution with executive commercial accountability:
 
 ```mermaid
 flowchart LR
-    RFI["📝 1. RFI\nMarket Sizing"] --> RFP["📋 2. RFP\nTechnical Scope"]
-    RFP --> Matrix["📊 3. Technical Matrix\nArchitecture & Security Score"]
-    Matrix --> SOW["📜 4. SOW & Milestones\nCommercials & Penalty SLAs"]
-    SOW --> Execution["⚙️ 5. Sprint Execution\nRACI Ownership & Burn-down"]
-    Execution --> Signoff["✅ 6. Knowledge Transfer\n& Formal Sign-Off"]
+    RFI["📝 1. RFI<br/>Market Sizing"] --> RFP["📋 2. RFP<br/>Technical Scope"]
+    RFP --> Matrix["📊 3. Technical Matrix<br/>Architecture & Security Score"]
+    Matrix --> SOW["📜 4. SOW & Milestones<br/>Commercials & Penalty SLAs"]
+    SOW --> Execution["⚙️ 5. Sprint Execution<br/>RACI Ownership & Burn-down"]
+    Execution --> Signoff["✅ 6. Knowledge Transfer<br/>& Formal Sign-Off"]
 
-    style RFI fill:#0f172a,stroke:#94a3b8,stroke-width:1px,color:#fff
-    style RFP fill:#0f172a,stroke:#94a3b8,stroke-width:1px,color:#fff
-    style Matrix fill:#14233c,stroke:#818cf8,stroke-width:1px,color:#fff
-    style SOW fill:#1e1b4b,stroke:#a78bfa,stroke-width:1px,color:#fff
-    style Execution fill:#0d261e,stroke:#34d399,stroke-width:1px,color:#fff
-    style Signoff fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fff
+    style RFI fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style RFP fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Matrix fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style SOW fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Execution fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Signoff fill:#ede9fe,stroke:#6366f1,stroke-width:2px,color:#0f172a
 ```
 
 - **SOW & Commercial Governance:** Drafting Statements of Work (SOWs), establishing technical deliverables, acceptance criteria, milestone schedules, and penalty clauses.
@@ -516,16 +617,18 @@ flowchart TD
         Cluster --> UsrPool["User Workload Node Pool<br/>(HPA & KEDA Autoscaling Microservices)"]
     end
 
-    style CSC fill:#f3f0ff,stroke:#7c3aed,stroke-width:2.5px,color:#1e1b4b
-    style Hardening fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style GitOpsK8s fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style VulnScan fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style SBOM fill:#faf5ff,stroke:#a855f7,stroke-width:1.5px,color:#1e1b4b
-    style ACR fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style ArgoCD fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#1e1b4b
-    style Cluster fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#1e1b4b
-    style SysPool fill:#ffffff,stroke:#a855f7,stroke-width:1px,color:#1e1b4b
-    style UsrPool fill:#ffffff,stroke:#a855f7,stroke-width:1px,color:#1e1b4b
+    style CSC fill:#ede9fe,stroke:#6366f1,stroke-width:2.5px,color:#0f172a
+    style Hardening fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style GitOpsK8s fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style DockerBuild fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style VulnScan fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style SBOM fill:#ffffff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style ACR fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style ArgoCD fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Cluster fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style SysPool fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style UsrPool fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
 ```
 
 - **Hardened Containerization:** Multi-stage Docker builds separating compile-time dependencies from minimal runtime environments (`distroless` / `alpine`), enforcing non-root user execution (`USER 10001`), and minimizing container attack surface.
@@ -548,7 +651,7 @@ Bridging modern generative AI capabilities with enterprise cloud infrastructure 
 
 ```mermaid
 flowchart TD
-    User["👨‍💻 Enterprise User / Engineer Prompt"] --> Orchestrator["🧠 Autonomous AI Agent & Orchestrator\n(LangChain / Semantic Kernel Reasoning Loop)"]
+    User["👨‍💻 Enterprise User / Engineer Prompt"] --> Orchestrator["🧠 Autonomous AI Agent & Orchestrator<br/>(LangChain / Semantic Kernel Reasoning Loop)"]
 
     subgraph ContextSystems["Integrated Tool & Knowledge Systems"]
         subgraph MCPFramework["🔌 Model Context Protocol (MCP)"]
@@ -566,8 +669,8 @@ flowchart TD
             direction TB
             Docs["Enterprise Docs & Runbooks"] --> Chunking["Document Chunking & ETL"]
             Chunking --> Embeddings["Dense Vector Embeddings"]
-            Embeddings --> VectorDB[("⚡ Vector DB\nAzure AI Search / Chroma / Pinecone")]
-            QuerySearch["Hybrid Search\n(BM25 + Semantic Vector Similarity)"]
+            Embeddings --> VectorDB[("⚡ Vector DB<br/>Azure AI Search / Chroma / Pinecone")]
+            QuerySearch["Hybrid Search<br/>(BM25 + Semantic Vector Similarity)"]
             VectorDB <--> QuerySearch
         end
     end
@@ -576,16 +679,31 @@ flowchart TD
     Orchestrator <==>|"Context Retrieval + RBAC"| QuerySearch
 
     subgraph LLMRuntime["🛡️ Governed LLM Inference Engine"]
-        Grounding["Grounded Context + Guardrails"] --> PrivateLLM["🤖 Foundation Model / Azure OpenAI\n(Private Endpoint + Token Budgeting)"]
+        Grounding["Grounded Context + Guardrails"] --> PrivateLLM["🤖 Foundation Model / Azure OpenAI<br/>(Private Endpoint + Token Budgeting)"]
         PrivateLLM --> AuditedOutput["✅ Audited Action & Structured Response"]
     end
 
     Orchestrator ==> Grounding
 
-    style Orchestrator fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff
-    style MCPFramework fill:#111e38,stroke:#38bdf8,stroke-width:1px,color:#fff
-    style RAGPipeline fill:#0d261e,stroke:#34d399,stroke-width:1px,color:#fff
-    style LLMRuntime fill:#1f132b,stroke:#d946ef,stroke-width:1px,color:#fff
+    style Orchestrator fill:#ede9fe,stroke:#6366f1,stroke-width:2px,color:#0f172a
+    style ContextSystems fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+    style MCPFramework fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style RAGPipeline fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style LLMRuntime fill:#f5f3ff,stroke:#8b5cf6,stroke-width:1.5px,color:#0f172a
+
+    style User fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style MCPServer fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Tool1 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Tool2 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Tool3 fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Docs fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Chunking fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Embeddings fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style VectorDB fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style QuerySearch fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style Grounding fill:#ffffff,stroke:#8b5cf6,stroke-width:1.2px,color:#0f172a
+    style PrivateLLM fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
+    style AuditedOutput fill:#ffffff,stroke:#7c3aed,stroke-width:2px,color:#0f172a
 ```
 
 - **Model Context Protocol (MCP) Integration:** Implemented Anthropic's open **Model Context Protocol (MCP)** to connect LLM agent workflows safely to external tool servers, enterprise databases, and cloud infrastructure management APIs without hardcoding custom wrappers.
